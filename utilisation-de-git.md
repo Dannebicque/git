@@ -15,7 +15,7 @@ GIT est configuré et activé sur un dossier. Cependant, GIT ne surveille rien, 
 
 A tout moment vous pouvez executer la commande suivante :
 
-```text
+```bash
 git status
 ```
 
@@ -23,7 +23,7 @@ Cette commande va vous indiquer l'activité de votre projet. Ce qui est modifié
 
 A tout moment vous pouvez regarder les différences en executant la commande suivante :
 
-```text
+```bash
 git diff
 ```
 
@@ -31,7 +31,7 @@ Cette commande va vous indiquer toutes les différences entre la dernière versi
 
 L'affichage précédent peut être difficile à lire, il est donc possible de regarder les différentes pour un fichier précis, en executant la commande suivante :
 
-```text
+```bash
 git diff /chemin/du/fichier
 ```
 
@@ -41,7 +41,7 @@ Cette commande va vous indiquer toutes les différences entre la dernière versi
 
 Certains fichiers sont définis comme "untracked" par GIT, c'est à dire qu'il ne suit pas les modifications. Il faut donc les ajouter, si on souhaite les versionner.
 
-```text
+```bash
 git add nomfichier1 nomfichier2
 ```
 
@@ -49,7 +49,7 @@ Cette commande permet de versionner le fichier nomfichier1 et nomfichier2.
 
 Il est aussi possible d'ajouter directement un répertoire.
 
-```text
+```bash
 git add repertoire/
 ```
 
@@ -67,7 +67,7 @@ Par contre il est nécessaire d'ajouter chaque nouveau fichier créé.
 
 Maintenant que les fichiers sont suivis, on peut sauvegarder les modifications
 
-```text
+```bash
 git commit
 ```
 
@@ -77,7 +77,7 @@ Cette commande va sauvegarder tous les fichiers suivis et modifiés. En executan
 
 Il peut parfois être intéressant de ne sauvegarder qu'une partie des modifications. Dans ce cas on peut préciser les fichiers
 
-```text
+```bash
 git commit nomfichier1 nomfichier2
 ```
 
@@ -85,7 +85,7 @@ git commit nomfichier1 nomfichier2
 
 On peut également inclure le message directment dans la ligne de commande
 
-```text
+```bash
 git commit -m "Mon message de suivi de modification"
 ```
 
@@ -95,13 +95,23 @@ On vient de voir l'intérêt d'utiliser Git. Mais pour le moment tout le suivi d
 
 Pour cela, il faut passer par un remote. On peut installer son propre remote assez facilement sur un serveur, ou utiliser une solution existante : GitHub, GitLab, BitBucket, Mercurial, ...
 
+1. Il faut créer un compte sur un gestionnaire de remote \(GitHub par exemple\)
+2. Créer son premier dépôt
+3. Associer ce dépôt à notre projet local en exécutant la commande ci-dessous :
 
+```bash
+git remote add origin https://github.com/user/repo.git
+```
 
-Cette solution n'est pas la seule, mais elle est la plus simple et rapide, car n'implique pas de configuration.
+La commande ci-dessus est à adapter à votre dépôt. Lors de la création d'un nouveau dépôt sur les remotes, vous avez généralement toutes les instructions.
 
-* Pour cela il faut se rendre sur la solution choisie \(GitHub par exemple\) et créer grâce à l'interface votre repository.
-* Remplissez les informations et laissez le fichier readme.md
-* Ensuite il faut cloner ce repository sur votre machine.
+* `origin` correspond au nom que vous donnez à votre dépôt. C'est le nom par défaut lorsque l'on a qu'un seul dépôt associé.
 
-Marquer solution pour ajouter le serveur + création sur github
+Il est possible d'associer plusieurs dépôts pour un projet. Il faudra choisir à chaque fois vers lequel vous souhaitez envoyer vos informations.
+
+Pour lister les remotes accessibles vous pouvez exécuter la commande suivante.
+
+```bash
+git remote -v
+```
 
