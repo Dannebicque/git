@@ -73,15 +73,11 @@ git commit
 
 Cette commande va sauvegarder tous les fichiers suivis et modifiés. En executant cette commande vous devrez **OBLIGATOIREMENT** indiquer un message pour permettre de comprendre les modifications.
 
-
-
 Il peut parfois être intéressant de ne sauvegarder qu'une partie des modifications. Dans ce cas on peut préciser les fichiers
 
 ```bash
 git commit nomfichier1 nomfichier2
 ```
-
-
 
 On peut également inclure le message directment dans la ligne de commande
 
