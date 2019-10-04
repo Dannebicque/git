@@ -21,7 +21,7 @@ git config --global user.name "votre_pseudo"
 Configuration de votre email, également pour tracer les modifications
 
 ```bash
-git config --global user.email moi@email.com
+git config --global user.email "moi@email.com"
 ```
 
 ### Configuration "esthétique"
